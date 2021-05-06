@@ -21,10 +21,10 @@ const PlayerForm = ({
   });
 
   const handleInputChange = (e) => {
-    setPlayers((prevState) => ({
+    setPlayer((prevState) => ({
       ...prevState,
       [e.target.name]:
-        e.target.name === 'grade' ? Number(e.target.value) : e.target.value,
+        e.target.name === 'position' ? e.target.value : e.target.value,
     }));
   };
 
@@ -69,7 +69,7 @@ const PlayerForm = ({
           <Input
             name='player'
             id='player'
-            value={player.teacher}
+            value={player.position}
             type='text'
             placeholder='Enter The Postion of the Player'
             onChange={handleInputChange}

@@ -6,7 +6,7 @@ import {
   BrowserRouter as Router
 } from 'react-router-dom';
 import firebaseConfig from '../helpers/apiKeys';
-import getPlayers from '../helpers/data/playerData';
+import { getPlayers } from '../helpers/data/playerData';
 import Routes from '../helpers/Routes';
 import NavBar from './components/NavBar';
 
