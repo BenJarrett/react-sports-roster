@@ -11,11 +11,11 @@ export default function Routes({ players, setPlayers }) {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route
-          path='/students'
+          path='/players'
           component={() => <Players students={players} setStudents={setPlayers} />}
         />
         <Route
-          path='/add-student'
+          path='/add-player'
           component={() => <AddPlayers setStudents={setPlayers} />}
         />
       </Switch>
