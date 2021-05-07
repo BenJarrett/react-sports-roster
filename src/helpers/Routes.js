@@ -15,7 +15,7 @@ export default function Routes({ players, setPlayers }) {
           component={() => <Players players={players} setPlayers={setPlayers} />}
         />
         <Route
-          path='/add-player'
+          path='/add-players'
           component={() => <AddPlayers setPlayers={setPlayers} />}
         />
       </Switch>

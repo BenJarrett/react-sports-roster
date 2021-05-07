@@ -3,7 +3,7 @@ import {
   Button, Form, FormGroup, Label, Input
 } from 'reactstrap';
 import PropTypes from 'prop-types';
-import { addSinglePlayer, updatePlayer } from '../../helpers/data/playerData';
+import { addPlayer, updatePlayer } from '../../helpers/data/playerData';
 
 const PlayerForm = ({
   formTitle,
@@ -24,18 +24,19 @@ const PlayerForm = ({
     setPlayer((prevState) => ({
       ...prevState,
       [e.target.name]:
-        e.target.name === 'position' ? e.target.value : e.target.value,
+        e.target.name === 'name' ? e.target.value : e.target.value,
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.warn(player.firebaseKey);
     if (player.firebaseKey) {
       // make call to updateStudent to update student and rerender the DOM
       updatePlayer(player).then(setPlayers); // this is the same as below, just shorthand.
       // updateStudent(student).then((studentArray) => setStudents(studentArray));
     } else {
-      addSinglePlayer(player).then(setPlayers); // this is the same as below, just shorthand.
+      addPlayer(player).then(setPlayers); // this is the same as below, just shorthand.
       // addStudent(student).then((studentArray) => setStudents(studentArray));
 
       // clear inputs
@@ -65,22 +66,22 @@ const PlayerForm = ({
         </FormGroup>
 
         <FormGroup>
-          <Label for="Postion">Position:</Label>
+          <Label for="position">Position:</Label>
           <Input
-            name='player'
-            id='player'
+            name='position'
+            id='position'
             value={player.position}
             type='text'
-            placeholder='Enter The Postion of the Player'
+            placeholder='Enter The Position of the Player'
             onChange={handleInputChange}
           />
         </FormGroup>
 
         <FormGroup>
-          <Label for="image">image:</Label>
+          <Label for="imageURL">image:</Label>
           <Input
-            name='image'
-            id='image'
+            name='imageURL'
+            id='imageURL'
             value={player.imageURL}
             type='text'
             placeholder='Add an Image'
