@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Home() {
   return (
-    <div className>
+    <div>
       <h1>Welcome to Pittsburgh Penguins Unofficial Roster </h1>
     </div>
   );
