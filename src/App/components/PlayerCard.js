@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
 
 import {
   Button,
@@ -20,7 +19,6 @@ const PlayerCard = ({
 
 }) => {
   const [editing, setEditing] = useState(false);
-  const history = useHistory();
 
   const handleClick = (type) => {
     switch (type) {
@@ -31,24 +29,25 @@ const PlayerCard = ({
       case 'edit':
         setEditing((prevState) => !prevState);
         break;
-
-      case 'view':
-        history.push(`/players/${firebaseKey}`);
-        break;
-
       default:
         console.warn('nothing selected');
     }
   };
 
   return (
-    <Card body>
+    <Card body style={{
+      width: '18rem',
+      flex: 'initial',
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      margin: '8px'
+    }}>
       <CardTitle tag="h5">{name}</CardTitle>
       <CardText>Position: {position}</CardText>
-      <CardText>Image: {imageURL}</CardText>
-      <Button color="warning" onClick={() => handleClick('view')}>View Player</Button>
-      <Button color="danger" onClick={() => handleClick('delete')}>Delete Player</Button>
-      <Button color="info" onClick={() => handleClick('edit')}>
+      <CardText></CardText>
+      <img style={{ width: '14rem', alignSelf: 'center', height: '18rem' }} src={imageURL} className="photo" alt="Card image cap" />
+      <Button style={{ backgroundColor: '#D8E1FF', color: '#000000', margin: '1rem' }} onClick={() => handleClick('delete')}>Delete Player</Button>
+      <Button style={{ backgroundColor: '#D8E1FF', color: '#000000', margin: '1rem' }}onClick={() => handleClick('edit')}>
         {editing ? 'Close Form' : 'Edit Player'}
       </Button>
       {

@@ -18,10 +18,10 @@ const NavBar = ({ user }) => {
   const authenticated = () => (
     <>
     <NavItem>
-    <Link className="nav-link" to="/add-players/">Add Players</Link>
+    <Link className="nav-link" to="/add-players/">Add to Roster</Link>
   </NavItem>
   <NavItem>
-    <Link className="nav-link" to="/players">Player Cards</Link>
+    <Link className="nav-link" to="/players">View Team Roster</Link>
   </NavItem>
   </>
   );
@@ -39,8 +39,8 @@ const NavBar = ({ user }) => {
                 && <NavItem>
                   {
                     user
-                      ? <Button color='info' onClick={signOutUser}>Sign Out</Button>
-                      : <Button color='info' onClick={signInUser}>Sign In</Button>
+                      ? <Button backgroundColor='B3CBB9' onClick={signOutUser}>Sign Out</Button>
+                      : <Button backgroundColor='B3CBB9' onClick={signInUser}>Sign In</Button>
                   }
                 </NavItem>
               }

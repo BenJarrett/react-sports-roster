@@ -20,11 +20,9 @@ function App() {
     getPlayers().then(setPlayers);
   }, []);
 
-  // SETTING THE USER
   useEffect(() => {
     firebase.auth().onAuthStateChanged((authed) => {
       if (authed) {
-        // do something
         const userInfoObj = {
           fullName: authed.displayName,
           profileImage: authed.photoURL,
@@ -33,7 +31,6 @@ function App() {
         };
         setUser(userInfoObj);
       } else if (user || user === null) {
-        // do something else
         setUser(false);
       }
     });

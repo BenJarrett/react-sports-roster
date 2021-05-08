@@ -5,6 +5,7 @@ import PlayerCard from '../App/components/PlayerCard';
 function Players({ players, setPlayers }) {
   return (
     <>
+    <h2> Team Roster </h2>
       <div className="card-container">
         {players.map((playerInfo) => (
           <PlayerCard
@@ -12,7 +13,7 @@ function Players({ players, setPlayers }) {
             firebaseKey={playerInfo.firebaseKey}
             name={playerInfo.name}
             position={playerInfo.position}
-            player={playerInfo.ImageURL}
+            imageURL={playerInfo.imageURL}
             setPlayers={setPlayers}
           />
         ))}

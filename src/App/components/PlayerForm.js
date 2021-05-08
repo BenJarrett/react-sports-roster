@@ -30,16 +30,10 @@ const PlayerForm = ({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.warn(player.firebaseKey);
     if (player.firebaseKey) {
-      // make call to updateStudent to update student and rerender the DOM
-      updatePlayer(player).then(setPlayers); // this is the same as below, just shorthand.
-      // updateStudent(student).then((studentArray) => setStudents(studentArray));
+      updatePlayer(player).then(setPlayers);
     } else {
-      addPlayer(player).then(setPlayers); // this is the same as below, just shorthand.
-      // addStudent(student).then((studentArray) => setStudents(studentArray));
-
-      // clear inputs
+      addPlayer(player).then(setPlayers);
       setPlayers({
         name: '',
         position: '',
@@ -51,7 +45,7 @@ const PlayerForm = ({
 
   return (
     <div className='player-form'>
-      <Form id='addPlayerForm' autoComplete='off' onSubmit={handleSubmit}>
+      <Form style={{ width: '35rem' }} id='addPlayerForm' autoComplete='off' onSubmit={handleSubmit}>
         <h2>{formTitle}</h2>
         <FormGroup>
           <Label for="name">Name:</Label>
@@ -83,7 +77,7 @@ const PlayerForm = ({
             name='imageURL'
             id='imageURL'
             value={player.imageURL}
-            type='text'
+            type='url'
             placeholder='Add an Image'
             onChange={handleInputChange}
           />
@@ -100,7 +94,7 @@ PlayerForm.propTypes = {
   setPlayers: PropTypes.func,
   name: PropTypes.string,
   position: PropTypes.string,
-  imageURL: PropTypes.string,
+  imageURL: PropTypes.URL,
   firebaseKey: PropTypes.string
 };
 

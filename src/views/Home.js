@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function Home() {
   return (
-    <div>
-      <h1>You are on the Home Page</h1>
+    <div className>
+      <h1>Welcome to Pittsburgh Penguins Unofficial Roster </h1>
     </div>
   );
 }
