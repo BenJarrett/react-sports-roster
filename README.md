@@ -12,9 +12,9 @@
 ## User Stories
 
 - A visitor to the site is met with a page prompting Google authentication. Logged out users can only access this landing page and must log in before the other features are available.
-- Authenticated users can see and use a navigation bar to visit the "Wrestlers" page or the "Add Wrestler" page.
-- On the "Wrestlers" page, the user can view, edit, or delete wrestler cards. 
-- On the "Add Wrestlers" page, the user can create a new wrestler card.
+- Authenticated users can see and use a navigation bar to visit the "Add Player" page or the "Add Player" page.
+- On the "View Roster" page, the user can view, edit, or delete wrestler cards. 
+- On the "Add Player" page, the user can create a new player card.
 - A user can only view cards that they have created.
 - Create, Edit, and Delete functions will reflect in the Firebase Realtime Database.
 
