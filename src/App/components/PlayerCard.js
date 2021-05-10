@@ -52,6 +52,7 @@ const PlayerCard = ({
       </Button>
       {
         editing && <PlayerForm
+        style={{ width: '5rem' }}
           formTitle='Edit Player'
           setPlayers={setPlayers}
           firebaseKey={firebaseKey}

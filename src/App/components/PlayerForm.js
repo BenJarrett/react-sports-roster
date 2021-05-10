@@ -45,7 +45,7 @@ const PlayerForm = ({
 
   return (
     <div className='player-form'>
-      <Form style={{ width: '35rem' }} id='addPlayerForm' autoComplete='off' onSubmit={handleSubmit}>
+      <Form style={{ width: '10rem' }} id='addPlayerForm' autoComplete='off' onSubmit={handleSubmit}>
         <h2>{formTitle}</h2>
         <FormGroup>
           <Label for="name">Name:</Label>
