@@ -40,7 +40,7 @@
 ## Contributors https://github.com/BenJarrett
 
 ## Loom Video Demo 
-- Soon
+https://www.loom.com/share/f61cf34a97664a508d563846e58222b3
 
 # Features I would like to add
 - Dropdown selection for Player Position
