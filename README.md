@@ -1,7 +1,7 @@
-# React Template
+# Unoficial Pittsburgh Penguins Team Roster [![Netlify Status](https://api.netlify.com/api/v1/badges/35e9e238-b2fc-4f80-9002-b1e25fcc4d82/deploy-status)](https://app.netlify.com/sites/hmp-wwe-rewind/deploys)
 
-**Use this template to get up and running quickly on projects.**
+## Project Objective
 
-This is just like the webpack template. Use it, create the repo, connect it to your local and `npm i`.
-
-- [Steps to deploy](https://github.com/nss-nightclass-projects/REACT-Deployment-Netlify)
+- Demonstrate proficient application of React.js, Router, React Router DOM, Private Routes, and User Authentication.
+- Benchmark progress with componentization and utilizing bundled webpacks.
+- Full CRUD, Axios calls, and Firebase Realtime Database.
