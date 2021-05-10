@@ -5,3 +5,13 @@
 body {
   background-color: $favColor;
 }
+
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+.card-body {
+  text-align: center;
+  justify-content: center;
+  background-color: 'B3CBB9';
+};
+};
